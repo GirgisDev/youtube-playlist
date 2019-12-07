@@ -1,0 +1,101 @@
+.table {
+  margin-top: 20px;
+}
+
+/***************************\
+    table head properties
+\***************************/
+
+.table__head {
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+  border-bottom: 1px solid #dedede;
+  padding-bottom: 20px;
+  user-select: none;
+}
+
+.table__title {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.table__title--title {
+  width: 43%;
+  margin-left: 20%;
+}
+
+.table__title--date {
+  width: 35%;
+}
+
+/***************************\
+    table body properties
+\***************************/
+
+.table__row {
+  padding: 0 7%;
+  height: 70px;
+  line-height: 70px;
+  position: relative;
+  border-bottom: 1px solid #dedede;
+}
+
+.table__row:hover {
+  background-color: #eee;
+}
+
+.table__col {
+  display: inline-flex;
+}
+
+.table__col--first {
+  width: 15%;
+}
+
+.table__col__img {
+  height: 50px;
+  max-width: 120px;
+  position: absolute;
+  top: 10px;
+  border-radius: 5px;
+}
+
+.table__col--second {
+  width: 50%;
+}
+
+.table__col--third {
+  width: 25%;
+}
+
+.table__col--fourth {
+  width: 10%;
+}
+
+/***************************\
+  table ordering properties
+\***************************/
+
+.order {
+  position: relative;
+}
+
+.order::before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  left: -16px;
+  top: 4px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.order--asc::before {
+  background-image: url(/assets/images/caret-up.svg);
+}
+
+.order--desc::before {
+  background-image: url(/assets/images/caret-down.svg);
+}

@@ -1,0 +1,31 @@
+.video-details {
+  color: #454545;
+}
+
+.video-details__cover {
+  height: 400px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.video-details__title {
+  margin: 0;
+  float: left;
+  font-size: 1.3rem;
+  line-height: 40px;
+  width: 80%;
+}
+
+.video-details__pub-date {
+  color: #E7292B;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 14px;
+}
+
+.video-details__description {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.7rem;
+}

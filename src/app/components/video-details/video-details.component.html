@@ -1,0 +1,20 @@
+<app-navbar></app-navbar>
+
+<div *ngIf="!loading && !err.msg" class="video-details">
+  <div
+    class="video-details__cover" 
+    style.backgroundImage="url({{video.thumbnails.maxres.url}})"></div>
+  <div class="boxed-container">
+    <h2 class="video-details__title limited-text">{{ video.title }}</h2>
+    <div class="btn btn--red pull-right">Add to favorites</div>
+    <div class="clearfix"></div>
+  </div>
+  <div class="hr"></div>
+  <div class="boxed-container">
+    <div class="video-details__pub-date">Published on {{ video.publishedAt | date: 'MMM d, yyyy' }}</div>
+    <div class="video-details__description" [innerText]="video.description"></div>
+  </div>
+  <div class="hr"></div>
+</div>
+<app-loading [loading]="loading"></app-loading>
+<app-error [err]="err"></app-error>

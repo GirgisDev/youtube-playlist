@@ -1,0 +1,42 @@
+.btn {
+  height: 40px;
+  align-items: center;
+  min-width: 100px;
+  padding: 0 20px;
+  border-radius: 3px;
+  border: none;
+  color: white;
+  justify-content: center;
+  text-align: center;
+  display: inline-flex;
+  font-size: 1.1rem;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+  text-decoration: none;
+  position: relative;
+  font-weight: 700;
+  user-select: none;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn--primary {
+  background-color: #FFF;
+  color: #000;
+  border: 1px solid #CCC;
+}
+
+.btn--primary:hover {
+  background-color: #E7292B;
+  border-color: #E7299F;
+  color: #FFF;
+}
+
+.btn--red {
+  background-color: #E7292B;
+  border-color: #E7299F;
+  color: #FFF;
+}

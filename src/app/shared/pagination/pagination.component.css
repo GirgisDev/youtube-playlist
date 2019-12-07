@@ -1,0 +1,15 @@
+.pagination {
+  color: #0d3ccc;
+  padding: 0 8%;
+  margin: 20px 0 40px;
+}
+
+.pagination__img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  padding: 7px;
+  background-color: #ccc;
+  margin-left: 10px;
+  border-radius: 3px;
+}

@@ -1,0 +1,46 @@
+<div class="table" *ngIf="!loading && !err.msg">
+  <div class="table__head">
+    <div 
+      [ngClass]="{
+        'order': orderWith == 'title',
+        'order--asc': orderType === 'asc',
+        'order--desc': orderType === 'desc'
+      }"
+      (click)="setOrder('title')"
+      class="table__title table__title--title">Title</div>
+    <div 
+      [ngClass]="{
+        'order': orderWith == 'publishedAt',
+        'order--asc': orderType === 'asc',
+        'order--desc': orderType === 'desc'
+      }"
+      (click)="setOrder('publishedAt')"
+      class="table__title table__title--date">Publish date</div>
+  </div>
+  <div class="table__body">
+    <div class="table__row" *ngFor="let video of videos | sort: orderType : orderWith | filter: searchString">
+      <div class="table__col table__col--first">
+        <img 
+          [src]="video.thumbnails.default.url" 
+          alt="video thumbnail" 
+          class="table__col__img">
+      </div>
+      <div class="table__col table__col--second">
+        <div 
+          [title]="video.title"
+          class="table__col__title limited-text">{{ video.title }}</div>
+      </div>
+      <div class="table__col table__col--third">
+        <span class="table__col__date">{{ video.publishedAt | date: 'short' }}</span>
+      </div>
+      <div class="table__col table__col--fourth">
+        <a routerLink="/video-details/{{ video.resourceId.videoId }}" class="btn btn--primary">Details</a>
+      </div>
+    </div>
+  </div>
+</div>
+<app-error [err]="err"></app-error>
+<app-loading [loading]="loading"></app-loading>
+<pagination 
+  *ngIf="videos.length && !loading && !err.msg"
+  (paginateTo)="paginate($event)"></pagination>

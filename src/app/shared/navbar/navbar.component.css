@@ -1,0 +1,42 @@
+.navbar {
+  padding: 0 100px;
+  border-bottom: 1px solid #dedede;
+  height: 80px;
+  line-height: 80px;
+}
+
+.navbar-logo {
+  float: left;
+  color: #454545;
+  font-size: 1.4rem;
+  text-decoration: none;
+  line-height: inherit;
+}
+
+.playlist-search__group {
+  float: right;
+  position: relative;
+}
+
+.playlist-search__input {
+  height: 44px;
+  width: 300px;
+  border-radius: 30px;
+  padding-right: 24%;
+  padding-left: 30%;
+  background-color: #f4f4f4;
+  border: none;
+  color: #7a7a7a;
+}
+
+.playlist-search__input:focus {
+  box-shadow: 0 0 0 0.2rem rgba(232, 42, 44, 0.3);
+  outline: none;
+}
+
+.playlist-search__icon {
+  width: 18px;
+  position: absolute;
+  top: 31px;
+  left: 20%;
+}

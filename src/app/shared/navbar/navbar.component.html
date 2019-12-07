@@ -1,0 +1,13 @@
+<div class="navbar">
+  <a routerLink="/" class="navbar-logo">Youtube playlist</a>
+  <div *ngIf="hasSearch" class="playlist-search__group">
+    <img src="assets/images/search.svg" class="playlist-search__icon">
+    <input 
+      type="text" 
+      class="playlist-search__input"
+      #search
+      (input)="emitSearchValue(search.value)"
+      placeholder="Search by video titles">
+  </div>
+  <div class="clearfix"></div>
+</div>

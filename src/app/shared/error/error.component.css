@@ -1,0 +1,24 @@
+.error-box {
+  color: #ff6465;
+  font-size: 1.8rem;
+  font-weight: bold;
+  position: relative;
+  margin: 0 auto;
+  width: 600px;
+  height: 400px;
+  line-height: 400px;
+  text-align: center;
+}
+
+.error-box__img {
+  width: 40px;
+  float: left;
+  position: absolute;
+  top: 180px;
+  left: 40px;
+  margin-right: 20px;
+}
+
+.error-box__text {
+  margin-left: 40px;
+}
